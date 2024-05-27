@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first: hsl(14, 45%, 36%);
+    --second: hsl(332, 51%, 32%);
+    --third: hsl(330, 100%, 98%);
+    --forth: hsl(30, 54%, 90%);
+    --fifth: hsl(30, 18%, 87%);
+    --sixth: hsl(30, 10%, 34%);
+    --seventh: hsl(24, 5%, 18%);
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sixth);
+    border-radius: 4px;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: hsl(30, 54%, 90%);
+}
+
+main {
+    max-width: 700px;
+    margin: 8em auto;
+    padding: 3em;
+    padding-bottom: 1em;
+    border-radius: 2em;
+    background-color: hsl(0, 0%, 100%);
+}
+
+img {
+    border-radius: 1em;
+    width: 100%;
+}
+
+
+.title {
+    font-family: 'Young Serif', sans-serif;
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+article {
+    padding-top: 3em;
+}
+
+div {
+    padding-top: 1em;
+}
+
+.preparation {
+    margin-top: 2em;
+    padding: 2em;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.preparation:hover {
+    background-color: var(--forth);
+}
+
+
+h3 {
+    color: var(--second);
+    font-size: 1.5em;
+}
+
+ul {
+    margin-left: 2em;
+}
+
+ul li {
+    padding-bottom: 1em;
+}
+
+h4 {
+    color: var(--first);
+}
+
+article h2 {
+    padding-bottom: 1em;
+    font-family: 'Young Serif', sans-serif;
+    font-size: 2em;
+    font-weight: lighter;
+    color: var(--first);
+}
+
+.second,
+.third {
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--fifth);
+}
+
+.third > ul {
+    list-style-type: decimal;
+}
+
+p {
+    color: var(--sixth);
+}
+
+.nutritional {
+    display: flex;
+}
+
+.nutritional div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.nutritional :nth-child(1) p {
+    padding: 1em 0 1em 2em;
+    border-bottom: 1px solid var(--fifth);
+}
+
+.nutritional > :nth-child(2) > p {
+    padding: 1em 0 1em 0;
+    color: var(--first);
+    font-weight: bold;
+    border-bottom: 1px solid var(--fifth);
+}
+
+.nutritional > :nth-child(1) > :last-child,
+.nutritional > :nth-child(2) > :last-child {
+    border: none;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 1em;
+        padding: 1.5em;
+    }
+    
+    .title {
+        font-size: 2em;
+    }
+}
